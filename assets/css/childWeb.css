@@ -1,0 +1,514 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+
+
+/* star banner */
+#wrapper{
+    height: auto;
+    padding: 15px 0;
+}
+ul{
+    list-style: none;
+    
+}
+a{
+    text-decoration: none;
+}
+#wrapper ul{ 
+    display: flex;
+    justify-content: center;
+}
+
+.list-items li {
+    padding-left: 15px ;
+    list-style-type: none;
+
+}
+.list-items li:first-child{
+    display: flex;
+    align-items: center;
+}
+
+
+/* end banner */
+
+
+/* start thanh navigation */
+
+#nav_bar{
+    display: flex;
+    background-color:#bd1723;
+}
+#nav_block{
+    margin: auto;
+    max-height: 41px;
+    position: relative;
+    
+}
+
+
+/* để chỉ viết in hoa chỉ riêng phần tử trong thanh navigation, dùng selector ">" để chỉ select con trực tiếp của thẻ nav bỏ qua subnav ^^ */
+
+#nav > li
+{   
+    font-size: 14px;
+    text-transform: uppercase;
+    float:left;
+    clear:none;  
+    border-top: 1px solid #bd1723;  
+    
+}
+#nav > li:first-child{       
+    font-size: 18px;        
+}
+#nav > li:last-child{
+    font-size: 17px;
+}
+#nav li a{
+    display: block;
+    line-height: 41px;      
+    color: white;
+    
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.2s ease-in-out;
+    
+    
+}
+
+
+#nav > li:hover > a{
+    color:#333;
+    background-color: #ffff; 
+    text-shadow: 0 0 0.2px #39f;   
+}
+#nav li:hover .subnav{
+    display: block ;         /*lúc này display:block trong hover sẽ mạnh hơn display:none trong selector dưới nên khi di chuột vào sẽ hiện ra các subnav */
+}
+#nav .subnav {
+    position: absolute;
+    display: none;
+    background-color: #f7f2f2;
+    left: 0;
+    font-size: 13px;
+    text-transform: none;
+    width: 100%;  
+}
+
+#nav .subnav li {
+    list-style-type: none;
+    float:left;             /* xóa khoảng trắng giữa các li giúp khi hover nhìn khít hơn ^^*/
+    clear:none;             /* xóa khoảng trắng giữa các li giúp khi hover nhìn khít hơn ^^*/
+    border-left: 1px solid white;
+}
+
+#nav .subnav li:hover a{
+    color:#333;
+    background-color: #ffff; 
+    text-shadow: 0 0 0.2px #39f;    
+
+}
+#nav .subnav a{
+    color: black;
+    width: 100%;
+}
+
+.subnav li:hover a{
+    color: black;
+    background-color:#fff;
+}
+ 
+/* ------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+a{
+    text-shadow: 0px 0px 1px #bbb;
+}
+
+/* START BODY-site */
+#body-site{
+    height: 3150px;
+    display: flex;
+
+}
+.wrapper-news-content{
+    margin: 0 auto;
+    width: 1160px;
+    height: 1000px;
+    padding-top: 40px;
+}
+.wrapper-news-content .top-title{
+    padding-bottom: 10px;
+}
+.wrapper-news-content .top-title a{
+    color: #920101;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+.news-context{
+    display: flex;
+}
+
+.big-column-left{
+    padding-bottom: 40px;
+   
+    display: flex;
+    max-width: 826.8px ;
+    flex-direction: column;
+}
+.main-news {
+    display: flex;
+    border-bottom: 1px solid #f7f2f2;
+    padding-bottom: 20px;
+}
+.main-news > div{
+    padding: 0 20px;
+}
+.main-news .big-main-news{
+    padding-left: 0px;
+}
+
+
+.main-news .big-main-news{
+    border-right: 1px solid #f7f2f2 ;
+}
+.main-news .big-main-news article{
+    max-width: 523px;
+    height: auto;
+
+}
+.big-main-news article div{
+    padding: 2px 0;
+}
+.big-main-news article .box-title a{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    color: black;
+    font-family: 'Merriweather', serif;
+
+}
+.big-main-news article .box-title a:hover{
+    color: #30407B;
+    transition-duration: 0.2s;
+}
+.big-main-news article .box-meta-small{
+    font-size: 12px;
+    color:#bbb;
+}
+
+.big-main-news article .box-img a img{
+    object-fit: contain;
+    width: 523px;  
+}
+.big-main-news article .box-des{
+    line-height: 150%;
+    font-size: 14px;
+
+}
+.small-main-news{
+    padding-top: 20px;
+}
+.small-main-news article {
+    max-width: 262px;  
+}
+.small-main-news article div{
+
+}
+.small-main-news article .box-img a img {
+    width: 262px;
+}
+.small-main-news article .box-title{
+    padding: 5px 0;
+}
+.small-main-news article .box-title a {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    line-height: 21px;
+    font-family: 'Merriweather', serif;
+}
+.subnews{
+    padding-left: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #f7f2f2;
+}
+.subnews > article{
+    max-width: 262px;
+    margin-left: 20px;
+    float: left;
+}
+
+.subnews > article:first-child{
+    margin-left: 0;
+}
+.subnews  article:last-child .box-img img{
+    margin: 10px 0;
+}
+.subnews article .box-img img{
+    width: 262px;
+}
+.subnews article .box-title a{
+    color: black;
+    font-family: 'Merriweather', serif;
+    font-weight:700;
+    font-size: 16px;
+}
+.box-list-other-news{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+.box-list-other-news  article{
+    padding: 15px 0;
+    position: relative;
+    height: 230px;
+    left: -50px;
+    border-bottom: 1px solid #f7f2f2;
+    
+}
+.box-list-other-news > article >div {
+    padding: 5px 0;
+}
+.box-list-other-news article .box-des,
+.box-list-other-news article .box-meta-small{
+    position: relative;
+    bottom: 165px;
+    left:  265px;
+    width: 535px;
+}
+
+.box-list-other-news article .box-title a{
+    color: black;
+    font-family: 'Merriweather';
+    
+}
+.box-list-other-news article .box-img img{
+    width: 248px ;  
+    
+}
+.box-list-other-news article .box-meta-small {
+    color: #bbb;
+    font-size: 12px;
+    
+}
+.box-list-other-news article .box-des p{  
+    font-size: 14px;
+    color: black;
+
+}
+.forward-button {
+    margin-top: 40px;
+    position: relative;
+    left: -3px;
+}
+.forward-button ul{
+    list-style: none;
+}
+.forward-button ul li{
+    display: inline-block;
+    
+    
+}
+.forward-button ul li:last-child{
+    margin-left : 20px;
+}
+
+.forward-button li a{
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        text-transform: uppercase;
+        background-color: #bd1723;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 10px 30px;
+        border: 3px solid #bd1723;
+        transition-duration: 0.2s;
+   
+}
+.forward-button li:hover a{ 
+    background-color: #fff;
+    color: #bd1723;
+}
+.forward-button li input{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    background-color: #bd1723;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px 10px;
+    border: 2px solid #bd1723;
+    transition: 0.2s ease-in-out;
+    text-align: center;
+}
+
+.forward-button li:hover input{
+    color: #bd1723;
+    background-color: #fff;
+}
+.list-name-news-web{
+    display: flex;
+    justify-content: center;
+}
+.list-name-news-web ul li{
+    float: left;
+    padding: 0 15px;
+    
+}
+.list-name-news-web ul li a{
+    color: #337ab7;
+    transition: 0.2 ease-in-out;
+    font-size: 14px;
+    
+    font-weight: 400;
+    text-shadow: 0px 0px 0px #bbb !important;
+}
+.list-name-news-web li:hover a{
+    text-decoration: underline;
+    color:#30407B;
+}
+
+
+.small-column-right{
+    padding-left: 30px;
+}
+
+.header-small-column-right ul{
+    display: flex;
+}
+.header-small-column-right ul li {
+    padding: 5px 10px ;
+    
+}
+.header-small-column-right ul li:last-child {
+    border-bottom: 1px solid #bd1723;
+}
+
+.header-small-column-right li a{
+    font-family: 'Merriweather';
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #bd1723;
+}
+.header-small-column-right li:first-child a{
+    color: gray !important;
+}
+
+.news-update-data {
+    width: 300px;
+    height: 890px;
+    background-color: #E7EEF4;
+    padding: 20px 0;
+}
+.news-update-data article {
+    margin: 20px 15px;
+    border-top: 1px solid white;
+    height: 65px;
+    
+
+    
+}
+
+.news-update-data article .box-meta{
+    font-size: 12px;
+    color: #bbb;
+    position: relative;
+    top: -10px;
+    height: 13px;
+    width: 87px;
+    background-color: #E7EEF4;
+    
+}
+.news-update-data article .box-meta span{
+    padding: 0 3px;
+    
+}
+.news-update-data article .box-title a{
+    color: black;
+    font-size: 14px;
+    font-family: 'Merriweather';
+    line-height: 20px;
+}
+.list-subnav{
+    margin-top: 20px;
+}
+.list-subnav ul li{
+    margin: 20px 0;
+    background-color: #F6F6F6;
+    position: relative;
+    padding: 10px 0;
+}
+.list-subnav li a{
+    color: black;
+    font-family: 'Merriweather';
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-top: 2px solid #bd1723;
+    padding: 8px;
+    
+}
+.list-subnav  ul li .ti-angle-down{
+    font-size: 13px;
+    position: absolute;
+    right: 5px; 
+}
+.list-img-ads li{
+    padding: 5px 0;
+}
+.list-img-ads li img{
+    width: 300px;
+}
+/* END BODY-site */
+/* ---------------------------------------------------------------------------------------------------------------- */
+
+/* START FOOTER  */
+
+#footer{
+    margin-top: 40px;
+    height: 165px;
+    background-color: #bd1723;
+    display: flex;
+    padding-left: 200px;
+    align-items: center;
+}
+#footer div {
+    margin-right: 20px;
+
+}
+.logo-content-footer-left{
+    display: flex;
+    flex-direction: column;
+}
+.logo-content-footer-left div span {
+    font-size: 13px;
+    color: white;
+
+}
+.list-text-right ul li{
+    padding: 5px 0;   
+    font-size: 13px; 
+    color: white;
+}
+
+
+
+/* END FOOTER  */
